@@ -36,3 +36,14 @@ def del_credential(credential):
     Function to delete a credential
     '''
     credential.delete_credential()
+def find_user(name):
+    '''
+    Function that finds a user by name and returns the user
+    '''
+    return User.find_by_name(name)
+def find_credential(name)
+     '''
+     Function that finds credential by password and return credential
+     '''
+     return Credential.find_by_name(name)
+     
