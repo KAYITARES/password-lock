@@ -21,6 +21,21 @@ class User:
         '''
 
         User.user_list.remove(self)
+        
+    @classmethod
+    def find_by_name(cls,name):
+        '''
+        Method that takes in a name and returns a user that matches that name.
+
+        Args:
+            name: name to search for
+        Returns :
+            User of person that matches the name.
+        '''
+
+        for user in cls.user_list:
+            if user.last_name == name:
+                return user
 
 
     def __init__(self,first_name,last_name,password,confirmation_password):
