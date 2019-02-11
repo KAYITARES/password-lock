@@ -52,6 +52,13 @@ class User:
 
         return False
 
+    @classmethod
+    def display_names(cls):
+        '''
+        method that returns the credential list
+        '''
+        return cls.credential_list
+
 
     def __init__(self,first_name,last_name,password,confirmation_password):
         '''
