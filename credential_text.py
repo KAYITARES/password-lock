@@ -66,7 +66,7 @@ class TestCredential(unittest.TestCase):
     # More tests above
     def test_delete_credential(self):
             '''
-            test_delete_user to test if we can remove a user from our user list
+            test_delete_credential to test if we can remove a credential from our credential list
             '''
             self.new_credential.save_credential()
             test_credential = Credential("Test","user") # new user
@@ -74,6 +74,20 @@ class TestCredential(unittest.TestCase):
 
             self.new_credential.delete_credential()# Deleting a user object
             self.assertEqual(len(Credential.credential_list),1)
+
+
+    def test_find_credential_by_name(self):
+        '''
+        test to check if we can find a credential by name and display information
+        '''
+
+        self.new_credential.save_credential()
+        test_credential = Credential("Test","user") # new contact
+        test_credential.save_credential()
+
+        found_credential = Credential.find_by_name("user")
+
+        self.assertEqual(found_credential.password,test_credential.password)
 
 if __name__=='__main__':
         unittest.main()
