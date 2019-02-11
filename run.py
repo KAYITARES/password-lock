@@ -57,3 +57,14 @@ def check_existing_names(name):
     '''
     return Credential.credential_exist(name)
 
+def display_names():
+    '''
+    Function that return all the saved names
+    '''
+    return User.display_names()
+def display_names():
+    '''
+    Function that return all the saved password
+    '''
+    return Credential.display_names()
+
