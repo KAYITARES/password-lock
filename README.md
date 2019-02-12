@@ -1,6 +1,6 @@
 # Password Locker
 
-## Built By [Cynthia.K],February 12th,2019
+## Created By Cynthia.K, 12th February,2019
 
 ## Description
 Password Locker is a terminal run python application that allows users to store details i.e. usernames and passwords of their various accounts.the user have to firstly create an accout,then login after login.he/she have to type dp for displaying all password saved,or type fp for seaching passord by name or type del to delete an account created or type gp to generate a password.
