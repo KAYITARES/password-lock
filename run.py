@@ -1,6 +1,8 @@
 #!/usr/bin/env python3.6
 from user import User
 from credential import Credential
+import string
+import random
 import sys
 
 def create_user(fname,lname,password,confirmation_password):
@@ -22,6 +24,8 @@ def save_names(user):
     Function to save user
     '''
     user.save_user()
+def pw_gen(size = 8, chars=string.ascii_letters + string.digits + string.punctuation):
+	return ''.join(random.choice(chars) for _ in range(size))
 def save_names(credential):
     '''
     Function to save credential
@@ -106,13 +110,13 @@ def main():
          print("enter first name")
          login_name=input()
          print("enter password")
-         password=input()
+         pwrd=input()
     
-         if password==password and f_name==login_name:
+         if pwrd==password and f_name==login_name:
               print("successfully logged in")
               print('\n')
          else:
-              print(f"password: {password} or name: {login_name} incorrect. Next time , Please confirm the password correctly.")  
+              print(f"password: {pwrd} or name: {login_name} incorrect. Next time , Please confirm the password correctly.")  
               sys.exit()   
 
          while True:
@@ -174,7 +178,18 @@ def main():
                         print('\n')
                         print("credential and password deleted")
                    else:
-                        print("account name does not exist")  
+                        print("account name does not exist")
+
+              elif short_code == 'gp':
+                   print("enter account name")
+                   account_name=input()
+                   print("enter length of the password you wish to generate(enter number)")
+                   size=int(input())
+                   password=pw_gen(size)
+                   save_names(create_credential(account_name,password))
+                   print('\n')
+                   print(f"new password {password} created")
+                   print('\n')   
               elif short_code == "ex":
                    print("bye.........")
                    break
