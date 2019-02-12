@@ -90,7 +90,7 @@ def main():
          print("First Name......")
          f_name= input()
      
-         print("Lat Name......")
+         print("Last Name......")
          l_name = input()
 
          print("Password.......")
@@ -103,20 +103,20 @@ def main():
          else:
               print("password incorrect")
               sys.exit()
-         print("now let procceed to login to our account")
+         
          print('\n')
-         print("enter your first name (the name must the same to the as the first name you entered previously ):")
+         print("please login with you First Name!")
          print('\n')
-         print("enter first name")
+         print("Enter First Name")
          login_name=input()
-         print("enter password")
+         print("Enter password")
          pwrd=input()
     
          if pwrd==password and f_name==login_name:
               print("successfully logged in")
               print('\n')
          else:
-              print(f"password: {pwrd} or name: {login_name} incorrect. Next time , Please confirm the password correctly.")  
+              print(f"incorrect username or password:{pwrd} {login_name}")  
               sys.exit()   
 
          while True:
@@ -169,7 +169,7 @@ def main():
                         print("that password does not exist")
 
               elif short_code == 'del':
-                   print("enter name of the account you wish to delete")
+                   print("enter delete credential name")
                    search_name=input()
                    if check_existing_names(search_name):
                         Credential = find_credential(search_name) 
@@ -178,17 +178,17 @@ def main():
                         print('\n')
                         print("credential and password deleted")
                    else:
-                        print("account name does not exist")
+                        print("credential name does not exist")
 
               elif short_code == 'gp':
-                   print("enter account name")
+                   print("enter credential name")
                    account_name=input()
-                   print("enter length of the password you wish to generate(enter number)")
+                   print("enter number length of password to generate")
                    size=int(input())
                    password=pw_gen(size)
                    save_names(create_credential(account_name,password))
                    print('\n')
-                   print(f"new password {password} created")
+                   print(f"password created is.........{password} ")
                    print('\n')   
               elif short_code == "ex":
                    print("bye.........")
