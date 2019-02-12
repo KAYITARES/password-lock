@@ -47,9 +47,9 @@ No bugs so far. but you can steel make a research on how you can use database wi
 * github
 * Terminal
 ## support
-for any support please contact me on:
+For any support please contact me on:
 Phone:0788774039
 Email:cyntkayitare@gmail.com
 ## License
-**[MIT]("http://choosealicense.com/licenses/mit")** copyright&copy;2019 **Cynthia kayitare**
+**[MIT](http://choosealicense.com/licenses/mit)** copyright&copy;2019 **Cynthia kayitare**
 
