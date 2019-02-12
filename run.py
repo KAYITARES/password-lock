@@ -68,3 +68,7 @@ def display_names():
     '''
     return Credential.display_names()
 
+    def main():
+         print("Hello Welcome to password locker.What is your name?")
+         user_name=input()
+         print(f"Hello {user_name}. you have to full your information to create a password locker")
