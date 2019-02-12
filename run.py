@@ -68,11 +68,11 @@ def display_names():
     Function that return all the saved password
     '''
     return Credential.display_credential()
-def del_names():
+def del_names(credential):
      '''
      Function that delete credential
      '''
-     Credential.delete_credential()
+     credential.delete_credential()
 
 def main():
          print("Hello Welcome to password locker.What is your name?")
@@ -99,6 +99,21 @@ def main():
          else:
               print("password incorrect")
               sys.exit()
+         print("now let procceed to login to our account")
+         print('\n')
+         print("enter your first name (the name must the same to the as the first name you entered previously ):")
+         print('\n')
+         print("enter first name")
+         login_name=input()
+         print("enter password")
+         password=input()
+    
+         if password==password and f_name==login_name:
+              print("successfully logged in")
+              print('\n')
+         else:
+              print(f"password: {password} or name: {login_name} incorrect. Next time , Please confirm the password correctly.")  
+              sys.exit()   
 
          while True:
               print("Use these short codes : np - create new password, dp - display password, fp -find a password, del - delete password, gp - generate password, ex -exit the password list")
