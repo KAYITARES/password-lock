@@ -174,6 +174,7 @@ def main():
                    if check_existing_names(search_name):
                         Credential = find_credential(search_name) 
                         del_names(Credential)
+                        print('\n')
                         print(f"{Credential.account_name} deleted")
                         print('\n')
                         print("credential and password deleted")
@@ -191,7 +192,7 @@ def main():
                    print(f"password created is.........{password} ")
                    print('\n')   
               elif short_code == "ex":
-                   print("bye.........")
+                   print("Goodbye.........")
                    break
               else:
                    print("I really didn't get that.please use the short code")
