@@ -34,7 +34,7 @@ class Credential:
         '''
 
         for credential in cls.credential_list:
-            if credential.password == name:
+            if credential.account_name == name:
                 return credential
 
     @classmethod
@@ -47,7 +47,7 @@ class Credential:
             Boolean: True or false depending if the credential exists
         '''
         for credential in cls.credential_list:
-            if credential.password == name:
+            if credential.account_name == name:
                     return True
 
         return False

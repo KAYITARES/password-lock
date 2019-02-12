@@ -94,7 +94,7 @@ class TestCredential(unittest.TestCase):
         test to check if we can return a Boolean  if we cannot find the password.
         '''
 
-        self.credential.save_credential()
+        self.new_credential.save_credential()
         test_credential = Credential("Test","user") # new credential
         test_credential.save_credential()
 
@@ -107,7 +107,7 @@ class TestCredential(unittest.TestCase):
         method that returns a list of all names saved
         '''
 
-        self.assertEqual(Credential.test_display_all_names(),Credential.credential_list)
+        self.assertEqual(Credential.display_credential(),Credential.credential_list)
 
 if __name__=='__main__':
         unittest.main()

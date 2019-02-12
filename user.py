@@ -57,7 +57,7 @@ class User:
         '''
         method that returns the credential list
         '''
-        return cls.credential_list
+        return cls.user_list
 
 
     def __init__(self,first_name,last_name,password,confirmation_password):
