@@ -72,3 +72,4 @@ def display_names():
          print("Hello Welcome to password locker.What is your name?")
          user_name=input()
          print(f"Hello {user_name}. you have to full your information to create a password locker")
+         print('\n')
